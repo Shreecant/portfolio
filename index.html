@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shrikant | Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        darkMode: 'class',
+        theme: {
+        extend: {
+            colors: {
+            primary: "#4F46E5",
+            lightbg: "#F5F5DC"
+        }
+      }
+    }
+  }
+</script>
+
+</head>
+<body class="bg-lightbg dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition duration-300 font-sans">
+    <!-- Fullscreen Certificate Modal -->
+<div id="cert-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
+  <div class="relative max-w-4xl w-full px-4">
+    <button onclick="closeModal()" class="absolute top-2 right-2 text-white text-3xl font-bold z-10">×</button>
+    <img id="modal-image" src="" alt="Certificate Preview" class="w-full max-h-[90vh] object-contain rounded" />
+  </div>
+</div>
+
+
+<!-- Navigation Bar -->
+<nav class="fixed top-0 left-0 w-full bg-gray-100 dark:bg-gray-800 py-4 px-6 z-50 border-b border-gray-300 dark:border-gray-700">
+  <div class="flex flex-row justify-center items-center gap-8">
+    <a href="#about" class="nav-link">About Me</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#certificates" class="nav-link">Certificates</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#contact" class="nav-link">Contact</a>
+
+    <!-- Fancy Theme Toggle -->
+    <div id="theme-toggle" class="w-16 h-8 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center px-1 cursor-pointer transition duration-300 relative">
+      <div id="toggle-circle" class="w-6 h-6 bg-white rounded-full shadow-md transform transition duration-300"></div>
+      <span id="theme-icon" class="absolute left-[0.5rem] text-sm dark:left-[2.25rem] transition-all duration-300">
+        🌞
+      </span>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-24">
+
+        <!-- Hero Section -->
+        <section class="pl-24 px-6 py-12 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+            <div>
+            <h2 class="text-2xl font-semibold text-primary inline-block border-b-2 border-primary mb-2">
+                Shrikant Bansode
+            </h2>
+
+            <h1 class="text-4xl md:text-5xl font-bold">
+                Welcome to my <span class="text-primary">Data Analyst Portfolio!</span>
+            </h1>
+
+            <p class="mt-4 text-lg text-gray-600 dark:text-gray-300">
+                I'm Shrikant, a data analyst skilled in Python, SQL, Power BI, and Excel. I turn raw data into actionable insights.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href="assets/Shrikant_CV.pdf" download class="btn-primary">📄 Download My CV</a>
+                <a href="#contact" class="btn-secondary">📬 Contact Me</a>
+            </div>
+            </div>
+
+            <div class="flex justify-center">
+            <img src="images/shrikant.png" alt="Shrikant" class="rounded-lg shadow-xl max-h-[400px]" />
+            </div>
+        </div>
+        </section>
+
+
+  <!-- About Section -->
+  <section id="about" class="px-6 md:px-24 py-12 max-w-6xl mx-auto">
+  <h2 class="text-center text-6xl font-bold mb-8">👋 About Me</h2>
+  <div class="grid md:grid-cols-2 gap-8 items-start">
+
+    <!-- Left Side -->
+    <div>
+      <h3 class="text-2xl font-bold text-primary mb-4">Aspiring Data Analyst</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">
+        Hello! I’m <strong>Shrikant</strong>, a passionate and self-driven tech enthusiast with a strong foundation in data analytics, computer vision, and full-stack development. I love solving real-world problems with technology and have built several impactful projects across different domains.
+      </p>
+      <p class="text-gray-600 dark:text-gray-300 mb-6">
+        Each project has taught me something new — from data pipelines and real-time computer vision to clean UI/UX and integrating machine learning models. I’m always eager to take on new challenges and create meaningful solutions through code.
+      </p>
+      <div class="mt-4 flex space-x-4">
+        <a href="https://github.com/Shreecant" target="_blank"><img src="images/logos/github.png" class="h-8 w-8" alt="GitHub" /></a>
+        <a href="https://www.linkedin.com/in/shrikant-bansode-40a940288" target="_blank"><img src="images/logos/linkedin.png" class="h-8 w-8" alt="LinkedIn" /></a>
+        <a href="https://www.instagram.com/shrii_cant" target="_blank"><img src="images/logos/instagram.png" class="h-8 w-8" alt="Instagram" /></a>
+        <a href="https://wa.me/918928575804" target="_blank"><img src="images/logos/whatsapp.png" class="h-8 w-8" alt="WhatsApp" /></a>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="space-y-6 text-gray-600 dark:text-gray-300">
+      <div>
+        <h4 class="font-semibold mb-1">🚗 Car Sales Performance Dashboard</h4>
+        <p>Analyzed sales data using Python and Power BI to visualize trends and regional performance, providing actionable insights.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-1">🚦 Traffic and Accident Analysis</h4>
+        <p>Used Excel, SQL, and Python (Pandas, Matplotlib) to identify accident-prone areas and suggest infrastructure improvements.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-1">😴 Drowsiness Detection System</h4>
+        <p>Built a real-time computer vision solution using OpenCV and dlib to detect driver fatigue and alert them instantly.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-1">🧏 Sign Language Translator</h4>
+        <p>Created a live sign-to-text translator using MediaPipe and ML, with a user-friendly web interface to support the hearing impaired.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-1">🔐 Login & Trade Diary Web App</h4>
+        <p>Developed a secure login system with PHP and MySQL and built a trading journal web app with charts and CRUD features for trade tracking.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="projects" class="px-6 md:px-24 py-12 max-w-6xl mx-auto">
+  <h2 class="text-center text-6xl font-bold mb-8">📊 Projects</h2>
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <!-- Always visible projects -->
+    <div class="project-card rounded-lg shadow-lg overflow-hidden">
+      <div class="relative group">
+        <img src="images/dashboard_car.png" alt="Car Sales Dashboard" class="w-full rounded mb-3">
+        <div class="absolute inset-0 bg-black bg-opacity-60 text-white opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-center justify-center text-center">
+         <p>Performed an in-depth analysis of a car sales dataset to uncover pricing trends, customer preferences, and regional sales performance. Utilized Python (Pandas, Matplotlib, Seaborn) and Power BI to clean, visualize, and interpret the data, leading to actionable insights such as high-performing car models, seasonal sales fluctuations, and pricing strategies that influence buyer behavior.
+         <a href=https://www.linkedin.com/posts/shrikant-bansode-40a940288_powerbi-dataanalytics-carsales-activity-7349184142883942403-UDl1?" target="_blank" class="underline text-primary hover:text-blue-400">View more</a> </p>
+        </div>
+      </div>
+      <h3 class="text-xl font-bold mt-2">Car Sales Analysis</h3>
+    </div>
+
+    <div class="project-card rounded-lg shadow-lg overflow-hidden">
+      <div class="relative group">
+        <img src="images/dashboard_traffic.png" alt="Traffic Dashboard" class="w-full rounded mb-3">
+        <div class="absolute inset-0 bg-black bg-opacity-60 text-white opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-center justify-center text-center">
+         <p> Developed interactive dashboards in Power BI to analyze accident trends across India, highlighting high-risk zones, time-based patterns, and key contributing factors. Leveraged data visualization techniques to present insights on accident frequency, severity, and regional hotspots, aiding in data-driven decision-making for road safety improvements.
+        <a href="https://www.linkedin.com/posts/shrikant-bansode-40a940288_powerbi-dataanalytics-trafficdata-activity-7349139891575844864-YJcD?" target="_blank" class="text-primary hover:underline block mt-1">View more ↗</a>
+
+        </div>
+      </div>
+      <h3 class="text-xl font-bold mt-2">Traffic/Accident Analysis</h3>
+    </div>
+  </div>
+
+  <!-- Hidden initially -->
+  <div id="more-projects" class="hidden grid md:grid-cols-2 gap-6 mt-6 transition-all duration-300 ease-in-out">
+
+    <div class="project-card rounded-lg shadow-lg overflow-hidden">
+      <div class="relative group">
+        <img src="images/drowsiness.png" alt="Drowsiness Detection" class="w-full rounded mb-3">
+        <div class="absolute inset-0 bg-black bg-opacity-60 text-white opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-center justify-center text-center">
+          <p>Designed and implemented a real-time driver fatigue detection system using OpenCV and dlib. The solution tracks eye movement and facial landmarks to identify signs of drowsiness, triggering alerts to prevent potential accidents. This project demonstrates practical application of computer vision techniques in enhancing road safety.
+         <a href="https://www.linkedin.com/posts/shrikant-bansode-40a940288_computervision-python-flask-activity-7325365818777591812-G6fX" target="_blank" class="text-primary hover:underline block mt-1">View more ↗</a>
+
+        </div>
+      </div>
+      <h3 class="text-xl font-bold mt-2">Drowsiness Detection</h3>
+    </div>
+
+    <div class="project-card rounded-lg shadow-lg overflow-hidden">
+      <div class="relative group">
+        <img src="images/sign_language.png" alt="Sign Language Translator" class="w-full rounded mb-3">
+        <div class="absolute inset-0 bg-black bg-opacity-60 text-white opacity-0 group-hover:opacity-100 transition-opacity p-4 flex items-center justify-center text-center">
+         <p> Built a real-time sign language recognition system using MediaPipe and machine learning to convert hand gestures into live text. The model was trained on custom gesture data and integrated into a user-friendly web interface to support communication for the hearing-impaired, enabling seamless translation of sign language into readable text on-screen.
+      <a href="https://github.com/Shreecant/sign-language" target="_blank" class="text-primary hover:underline block mt-1">GitHub ↗</a>
+         
+        </div>
+      </div>
+      <h3 class="text-xl font-bold mt-2">Sign Language Translator</h3>
+    </div>
+  </div>
+  <div id="more-projects" class="hidden grid md:grid-cols-2 gap-6 mt-6">
+  <!-- Additional projects go here -->
+</div>
+
+
+  <!-- Show More Button -->
+  <div class="text-center mt-8">
+    <button onclick="toggleProjects()" class="btn-primary px-6 py-2 rounded-lg text-white font-semibold transition hover:bg-primary-dark">
+      Show More Projects
+    </button>
+  </div>
+</section>
+
+<script>
+  function toggleProjects() {
+    const moreProjects = document.getElementById('more-projects');
+    const button = event.target;
+
+    if (moreProjects.classList.contains('hidden')) {
+      moreProjects.classList.remove('hidden');
+      button.textContent = 'Show Less';
+    } else {
+      moreProjects.classList.add('hidden');
+      button.textContent = 'Show More Projects';
+    }
+  }
+</script>
+
+
+
+
+
+      <!-- Certificate -->
+    <section id="certificates" class="px-6 md:px-24 py-12 max-w-6xl mx-auto">
+      <h2 class="text-center text-4xl font-bold mb-12 text-gray-900 dark:text-white">🎓 Certificates</h2>
+
+      <!-- Certificate Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Always visible certificates -->
+        <div class="text-center">
+          <button onclick="openModal(this)" data-src="images/cert1.jpg">
+            <img src="images/cert1.jpg"
+                class="mx-auto h-80 object-contain rounded shadow-lg transition-transform transform duration-300 hover:scale-150"
+                alt="Certificate 1" />
+          </button>
+          <p class="mt-4 font-bold text-gray-900 dark:text-white">Data Visualization</p>
+          <p class="text-blue-700 dark:text-blue-400 font-semibold text-sm">Anudip</p>
+        </div>
+
+        <div class="text-center">
+          <button onclick="openModal(this)" data-src="images/cert2.jpg">
+            <img src="images/cert2.jpg"
+                class="mx-auto h-80 object-contain rounded shadow-lg transition-transform transform duration-300 hover:scale-150"
+                alt="Certificate 2" />
+          </button>
+          <p class="mt-4 font-bold text-gray-900 dark:text-white">Digital Literacy</p>
+          <p class="text-blue-700 dark:text-blue-400 font-semibold text-sm">B. K. Birla Night College</p>
+        </div>
+
+        <div class="text-center">
+          <button onclick="openModal(this)" data-src="images/cert3.jpg">
+            <img src="images/cert3.jpg"
+                class="mx-auto h-80 object-contain rounded shadow-lg transition-transform transform duration-300 hover:scale-150"
+                alt="Certificate 3" />
+          </button>
+          <p class="mt-4 font-bold text-gray-900 dark:text-white">DANLC- python</p>
+          <p class="text-blue-700 dark:text-blue-400 font-semibold text-sm">Anudip</p>
+        </div>
+      </div>
+
+      <!-- Hidden certificates -->
+       <!--
+     <div id="more-certificates" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 hidden">
+
+        <div class="text-center">
+          <button onclick="openModal(this)" data-src="images/cert4.jpg">
+            <img src="images/cert4.jpg"
+                class="mx-auto h-80 object-contain rounded shadow-lg transition-transform transform duration-300 hover:scale-150"
+                alt="Certificate 4" />
+          </button>
+          <p class="mt-4 font-bold text-gray-900 dark:text-white">Deloitte internship</p>
+          <p class="text-blue-700 dark:text-blue-400 font-semibold text-sm">Anudip</p>
+        </div>
+
+        <div class="text-center">
+          <button onclick="openModal(this)" data-src="images/cert5.jpg">
+            <img src="images/cert5.jpg"
+                class="mx-auto h-80 object-contain rounded shadow-lg transition-transform transform duration-300 hover:scale-150"
+                alt="Certificate 5" />
+          </button>
+          <p class="mt-4 font-bold text-gray-900 dark:text-white">MELL Exam</p>
+          <p class="text-blue-700 dark:text-blue-400 font-semibold text-sm">Anudip</p>
+        </div> -->
+
+      </div> 
+
+      <!-- Show More Button -->
+      <div class="text-center mt-8">
+        <button onclick="toggleCertificates()" class="btn-primary px-6 py-2 rounded-lg text-white font-semibold transition hover:bg-primary-dark">
+          Show More Certificates
+        </button>
+      </div>
+    </section>
+
+<!-- Toggle Script -->
+<script>
+  function toggleCertificates() {
+    const more = document.getElementById('more-certificates');
+    const btn = event.target;
+
+    if (more.classList.contains('hidden')) {
+      more.classList.remove('hidden');
+      btn.textContent = 'Show Less';
+    } else {
+      more.classList.add('hidden');
+      btn.textContent = 'Show More Certificates';
+    }
+  }
+</script>
+
+
+
+  <!-- Skills Section -->
+        <section id="skills" class="px-6 md:px-24 py-12 max-w-6xl mx-auto text-center">
+        <h2 class="text-6xl font-bold mb-8">🧠 Skills</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 place-items-center">
+
+            <!-- HTML -->
+            <div class="flex flex-col items-center">
+            <img src="images/logos/html.png" alt="HTML" class="h-20 w-20 mb-2" />
+            <span class="text-base text-white">HTML</span>
+            </div>
+
+            <!-- CSS -->
+            <div class="flex flex-col items-center">
+            <img src="images/logos/css.png" alt="CSS" class="h-20 w-20 mb-2" />
+            <span class="text-base text-white">CSS</span>
+            </div>
+
+            <!-- Python -->
+            <div class="flex flex-col items-center">
+            <img src="images/logos/python.png" alt="Python" class="h-20 w-20 mb-2" />
+            <span class="text-base text-white">Python</span>
+            </div>
+
+            <!-- SQL -->
+            <div class="flex flex-col items-center">
+            <img src="images/logos/sql.svg" alt="SQL" class="h-20 w-20 mb-2" />
+            <span class="text-base text-white">SQL</span>
+            </div>
+
+            <!-- Power BI -->
+            <div class="flex flex-col items-center">
+            <img src="images/logos/powerbi.png" alt="Power BI" class="h-20 w-20 mb-2" />
+            <span class="text-base text-white">Power BI</span>
+            </div>
+
+            <!-- Excel -->
+            <div class="flex flex-col items-center">
+            <img src="images/logos/excel.png" alt="Excel" class="h-20 w-20 mb-2" />
+            <span class="text-base text-white">Excel</span>
+            </div>
+
+            <!-- PHP -->
+            <div class="flex flex-col items-center">
+            <img src="images/logos/php.png" alt="PHP" class="h-20 w-20 mb-2" />
+            <span class="text-base text-white">PHP</span>
+            </div>
+
+            <!-- MySQL -->
+            <div class="flex flex-col items-center">
+            <img src="images/logos/mysql.png" alt="MySQL" class="h-20 w-20 mb-2" />
+            <span class="text-base text-white">MySQL</span>
+            </div>
+
+        </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="px-6 md:px-24 py-12 max-w-6xl mx-auto">
+        <h2 class="text-6xl font-bold mb-10 text-center">📬 Contact Me</h2>
+        <p class="text-xl text-gray-500 dark:text-gray-400 max-w-4xl mx-auto">
+            Ready to get started? Feel free to reach out through the contact form, and let's embark on a journey of innovation and success.
+        </p>
+        <section id="contact" class="py-16 px-6 md:px-24 text-center">
+
+</section>
+
+
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- Left Info Panel -->
+            <div class="bg-gray-900 text-white dark:bg-gray-800 rounded-lg p-8 shadow-md">
+            <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+            <p class="mb-6 text-gray-300">Fill up the form and I will get back to you within 24 hours.</p>
+            <div class="flex items-center mb-4 space-x-3">
+                <span class="text-xl">📞</span>
+                <span class="font-semibold">+91 8928575804</span>
+            </div>
+            <div class="flex items-center mb-4 space-x-3">
+                <span class="text-xl">📧</span>
+                <span class="font-semibold">shrikantbansode41@gmail.com</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span class="text-xl">🎫</span>
+                <span class="font-semibold">Open Support Ticket</span>
+            </div>
+            </div>
+
+            <!-- Right Form Panel -->
+            <form
+            action="https://formspree.io/f/xeozgoal"
+            method="POST"
+            class="bg-white dark:bg-gray-900 rounded-lg p-8 shadow-md"
+            >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">First Name</label>
+                <input type="text" name="first_name" required placeholder="eg. Roham"
+                        class="mt-1 w-full rounded border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2" />
+                </div>
+                <div>
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Last Name</label>
+                <input type="text" name="last_name" required placeholder="eg. Kamble"
+                        class="mt-1 w-full rounded border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2" />
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+                <input type="email" name="email" required placeholder="eg. rohan@mail.com"
+                    class="mt-1 w-full rounded border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2" />
+            </div>
+
+            <div class="mt-4">
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">What are you interested on?</label>
+                <div class="flex flex-wrap gap-4 mt-2 text-gray-700 dark:text-gray-300">
+                <label class="flex items-center space-x-2">
+                    <input type="radio" name="interest" value="Full-Time Role" required class="text-primary" />
+                    <span>Full-Time Role</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="radio" name="interest" value="Freelance Project" class="text-primary" />
+                    <span>Freelance Project</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="radio" name="interest" value="Collaboration" class="text-primary" />
+                    <span>Collaboration</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="radio" name="interest" value="Other" class="text-primary" />
+                    <span>Other</span>
+                </label>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Your Message</label>
+                <textarea name="message" rows="4" required
+                        class="mt-1 w-full rounded border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2"></textarea>
+            </div>
+
+            <input type="hidden" name="_subject" value="New contact from portfolio" />
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html" />
+
+            <button type="submit"
+                    class="mt-6 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-6 py-2 rounded hover:opacity-90 transition font-bold">
+                SEND MESSAGE
+            </button>
+            </form>
+        </div>
+        </section>
+
+
+
+
+  <footer class="ml-24 text-center py-6 text-sm text-gray-500 dark:text-gray-400">
+    &copy; 2025 Shrikant. All rights reserved.
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
+</main>
+
+
+<!-- Smooth Scroll + Theme Toggle -->
+<script>
+  // Smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Theme toggle
+  const toggleContainer = document.getElementById('theme-toggle');
+  const toggleCircle = document.getElementById('toggle-circle');
+  const themeIcon = document.getElementById('theme-icon');
+  const html = document.documentElement;
+
+  function setDarkMode(isDark) {
+    if (isDark) {
+      html.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      toggleCircle.classList.add('translate-x-8');
+      themeIcon.textContent = '🌙';
+      themeIcon.classList.remove('left-[0.5rem]');
+      themeIcon.classList.add('left-[2.25rem]');
+    } else {
+      html.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      toggleCircle.classList.remove('translate-x-8');
+      themeIcon.textContent = '🌞';
+      themeIcon.classList.add('left-[0.5rem]');
+      themeIcon.classList.remove('left-[2.25rem]');
+    }
+  }
+
+  toggleContainer.addEventListener('click', () => {
+    const isDark = !html.classList.contains('dark');
+    setDarkMode(isDark);
+  });
+
+  const savedTheme = localStorage.getItem('theme');
+  setDarkMode(savedTheme === 'dark');
+</script>
+
+<script>
+  function openModal(el) {
+    const src = el.getAttribute('data-src');
+    const modal = document.getElementById('cert-modal');
+    const modalImg = document.getElementById('modal-image');
+    modalImg.src = src;
+    modal.classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('cert-modal').classList.add('hidden');
+  }
+
+  // Optional: close on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+</script>
+
+
+
+</body>
+</html>
